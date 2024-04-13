@@ -1,7 +1,7 @@
 import os
 import cv2
 
-from src.webcam_utils import (
+from webcam_utils import (
     calculate_laser_pov,
     draw_rectangle,
     detect_faces,
