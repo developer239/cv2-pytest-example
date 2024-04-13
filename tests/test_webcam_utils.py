@@ -7,8 +7,14 @@ def test_calculate_laser_pov():
     assert top_left == (260, 180) and bottom_right == (380, 300)
 
 def test_calculate_rectangle_center():
+    # imaginary rectangle top left
     top_left = (100, 100)
+    # imaginary rectangle bottom right
     bottom_right = (300, 300)
+    # top_left[0] + (bottom_right[0] - top_left[0]) // 2
+    # 100 + (300 - 100) // 2 = 200
+    # top_left[1] + (bottom_right[1] - top_left[1]) // 2
+    # 100 + (300 - 100) // 2 = 200
     expected_center = (200, 200)
 
     assert calculate_rectangle_center(top_left, bottom_right) == expected_center
