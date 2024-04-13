@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 def calculate_center_rectangle(frame):
     h, w, _ = frame.shape
