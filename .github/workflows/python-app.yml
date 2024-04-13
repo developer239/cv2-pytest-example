@@ -20,6 +20,7 @@ jobs:
           auto-activate-base: false
           python-version: 3.8
 
-      - name: Run tests
-        run: |
-          pytest
+      - name: Run unit tests
+        shell: bash -l {0}
+        run: pytest
+        working-directory: tests
