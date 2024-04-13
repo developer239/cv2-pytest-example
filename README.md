@@ -36,19 +36,14 @@ To ensure the functions are working as expected, run the unit tests with Pytest:
 pytest tests/
 ```
 
+## Running Linter
+To check the code for any linting errors, run the following command:
+```
+ruff check src/ tests/
+```
+
 ## Features
 - **Webcam Feed**: Shows live video from your webcam.
 - **Center Rectangle**: Draws a green rectangle fixed at the center of the video frame.
 - **Face Detection**: Detects faces in the video feed and outlines them with red rectangles.
 - **Directional Arrow**: Draws a blue arrow from the center rectangle to each detected face, indicating the direction.
-
-## Contributing
-Feel free to fork the project and submit pull requests with enhancements or fixes. Make sure to write tests for new features or changes.
-
-## License
-Specify the license under which the project is released.
-
-## Contact
-For bugs, suggestions, or general questions, open an issue in the project repository or contact the maintainers directly.
-
-This README provides detailed instructions on how to set up and run the project, along with information on the features and how to contribute to its development.
