@@ -4,6 +4,8 @@
 
 This application utilizes a webcam to display a live feed, draw a rectangle in the center, detect faces, and draw rectangles around detected faces. Additionally, it draws an arrow from the center rectangle to each detected face.
 
+![Webcam Application Preview](preview.gif)
+
 ## Setup
 
 ### Prerequisites
@@ -43,9 +45,3 @@ To check the code for any linting errors, run the following command:
 ```
 ruff check src/ tests/
 ```
-
-## Features
-- **Webcam Feed**: Shows live video from your webcam.
-- **Center Rectangle**: Draws a green rectangle fixed at the center of the video frame.
-- **Face Detection**: Detects faces in the video feed and outlines them with red rectangles.
-- **Directional Arrow**: Draws a blue arrow from the center rectangle to each detected face, indicating the direction.
