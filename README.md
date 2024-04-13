@@ -18,6 +18,10 @@ This application utilizes a webcam to display a live feed, draw a rectangle in t
    ```
    conda activate webcam-app
    ```
+5. **(optional)** Configure PyCharm to use the Conda environment:
+   - Search for current interpreter in the bottom right corner of the IDE and click the button name.
+   - Select 'Add Interpreter' and 'Add Local Interpreter'.
+   - Choose 'Conda Environment' and 'Use Existing' and select the newly created 'webcam-app' environment.
 
 ## Running the Application
 To start the application, execute the following command in your terminal:
