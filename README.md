@@ -1,3 +1,5 @@
+[![Test](https://github.com/developer239/cv2-pytest-example/actions/workflows/python-app.yml/badge.svg)](https://github.com/developer239/cv2-pytest-example/actions/workflows/python-app.yml)
+
 # Webcam Application with Face Detection
 
 This application utilizes a webcam to display a live feed, draw a rectangle in the center, detect faces, and draw rectangles around detected faces. Additionally, it draws an arrow from the center rectangle to each detected face.
