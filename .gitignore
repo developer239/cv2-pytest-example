@@ -1,1 +1,3 @@
 /.idea
+/.ruff_cache
+/tests/.pytest_cache
