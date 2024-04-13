@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: webcam-app
+          environment-file: environment.yml
+          auto-activate-base: false
+          python-version: 3.8
+
+      - name: Run tests
+        run: |
+          pytest
