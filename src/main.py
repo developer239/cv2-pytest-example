@@ -1,13 +1,14 @@
-import os
-from src.webcam_utils import *
-
+import cv2
+from src.webcam_utils import (
+    calculate_center_rectangle,
+    draw_rectangle,
+    detect_faces,
+    draw_direction_arrow
+)
 
 def main():
     cap = cv2.VideoCapture(0)
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    cascade_path = os.path.join(base_dir, '..', 'assets', 'cascades', 'haarcascade_frontalface_default.xml')
-    face_cascade = cv2.CascadeClassifier(cascade_path)
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     while True:
         ret, frame = cap.read()
@@ -18,10 +19,8 @@ def main():
         draw_rectangle(frame, *center_rect)
 
         faces = detect_faces(frame, face_cascade)
-        first_face = faces[0] if len(faces) > 0 else None
-
-        if (first_face is not None):
-            face_rect = ((first_face[0], first_face[1]), (first_face[0] + first_face[2], first_face[1] + first_face[3]))
+        for (x, y, w, h) in faces:
+            face_rect = ((x, y), (x + w, y + h))
             draw_rectangle(frame, *face_rect, color=(255, 0, 0))
             draw_direction_arrow(frame, center_rect, face_rect)
 
@@ -31,7 +30,6 @@ def main():
 
     cap.release()
     cv2.destroyAllWindows()
-
 
 if __name__ == "__main__":
     main()

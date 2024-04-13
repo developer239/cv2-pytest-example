@@ -5,3 +5,5 @@ dependencies:
   - python=3.8
   - opencv
   - pytest
+  - pip:
+    - ruff
